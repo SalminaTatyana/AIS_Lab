@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Institute\\AIS_Lab\\AIS_Lab\\AIS_Lab\\AIS_Lab.csproj": {}
+    "C:\\Users\\79084\\Documents\\AIS_Lab\\AIS_Lab\\AIS_Lab\\AIS_Lab.csproj": {}
   },
   "projects": {
-    "C:\\Institute\\AIS_Lab\\AIS_Lab\\AIS_Lab\\AIS_Lab.csproj": {
+    "C:\\Users\\79084\\Documents\\AIS_Lab\\AIS_Lab\\AIS_Lab\\AIS_Lab.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Institute\\AIS_Lab\\AIS_Lab\\AIS_Lab\\AIS_Lab.csproj",
+        "projectUniqueName": "C:\\Users\\79084\\Documents\\AIS_Lab\\AIS_Lab\\AIS_Lab\\AIS_Lab.csproj",
         "projectName": "AIS_Lab",
-        "projectPath": "C:\\Institute\\AIS_Lab\\AIS_Lab\\AIS_Lab\\AIS_Lab.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Institute\\AIS_Lab\\AIS_Lab\\AIS_Lab\\obj\\",
+        "projectPath": "C:\\Users\\79084\\Documents\\AIS_Lab\\AIS_Lab\\AIS_Lab\\AIS_Lab.csproj",
+        "packagesPath": "C:\\Users\\79084\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\79084\\Documents\\AIS_Lab\\AIS_Lab\\AIS_Lab\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\79084\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -47,6 +43,20 @@
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -67,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     }
