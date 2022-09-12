@@ -23,5 +23,30 @@ namespace AIS_Lab.Controllers
             }
             return View();
         }
+
+        public IActionResult Delete (File file)
+        {
+            using (ScientiaDBContext db = new ScientiaDBContext())
+            {
+                db.Files.Remove(file);
+                db.SaveChanges();
+            }
+            return View();
+        }
+
+        public IActionResult Change (File file)
+        {
+            using (ScientiaDBContext db = new ScientiaDBContext())
+            {
+                db.Files.Update(file);
+                db.SaveChanges();
+            }
+            return View();
+        }
+
+        public List<File> GetFiles()
+        {
+            
+        }
     }
 }
