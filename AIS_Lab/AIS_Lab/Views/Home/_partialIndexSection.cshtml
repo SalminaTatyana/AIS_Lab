@@ -1,0 +1,51 @@
+﻿@model AIS_Lab.Models.IndexSectionModel
+@if (Model != null)
+{
+    <div class="section-index-banner">
+
+        <div class="section-index-banner">
+            <div class="section-index-banner-text">
+
+                @if (@Model.BlockTitle != null)
+                {
+                    <h2 class="block-title">
+                        @Model.BlockTitle
+                    </h2>
+                }
+                @if (@Model.Text != null)
+                {
+                    <p class="section-index-banner-text-item">
+                        @Model.Text
+                    </p>
+                }
+
+                @if (Model.List != null)
+                {
+                    @if (Model.List.Count() > 0)
+                    {
+                        <ul>
+                            @for (int i = 0; i < Model.List.Count(); i++)
+                            {
+                                <li>
+                                    @Model.List[i]
+                                </li>
+                            }
+
+                        </ul>
+                    }
+                }
+
+                @if (Model.IsButton & Model.Controller != null & Model.Action != null)
+                {
+                    <a class="primary-btn" asp-controller="@Model.Controller" asp-action="@Model.Action">Узнать больше</a>
+                }
+            </div>
+            @if (Model.Img!=null)
+            {
+                <div class="section-index-banner-img"><img src="@Model.Img" /></div>
+            }
+
+        </div>
+
+    </div>
+}
