@@ -46,7 +46,13 @@ namespace AIS_Lab.Controllers
 
         public List<File> GetFiles()
         {
-            
+            List<File> files = new List<File>();
+            using (ScientiaDBContext db = new ScientiaDBContext())
+            {
+                files = db.Files.ToList();
+            }
+            return files;
         }
+
     }
 }
