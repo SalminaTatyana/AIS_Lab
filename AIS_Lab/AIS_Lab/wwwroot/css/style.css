@@ -404,7 +404,7 @@ a {
     color: #09604A;
     text-decoration: none; }
   a:active {
-    color: #198369;
+    color: #BCCCE8;
     text-decoration: none; }
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     a {
@@ -491,6 +491,57 @@ main {
   -ms-flex: 1 0 auto;
   flex: 1 0 auto; }
 
+.block-title {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 47px;
+  color: #FFFFFF; }
+
+h2.block-title {
+  font-size: 28px;
+  line-height: 41px; }
+
+h3.block-title {
+  font-size: 24px;
+  line-height: 36px; }
+
+h4.block-title {
+  font-size: 20px;
+  line-height: 30px; }
+
+p {
+  font-family: "RobotoCondensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF; }
+
+ul {
+  list-style: none; }
+
+li {
+  font-family: "RobotoCondensed"; }
+
+ul li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 15px; }
+
+ul li:nth-of-type(3n-2)::before {
+  background-color: #5882CA; }
+
+ul li:nth-of-type(3n-1)::before {
+  background-color: #755BCA; }
+
+ul li:nth-of-type(3n)::before {
+  background-color: #4ECAAB; }
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -509,3 +560,79 @@ header {
     font-size: 25px;
     color: #BFADF9;
     margin-left: 44px; }
+
+.primary-btn {
+  padding: 10px 20px 10px;
+  min-width: 140px;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-weight: 500;
+  text-align: center;
+  background-color: #5882CA;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .primary-btn:hover, .primary-btn:focus {
+    background-color: #755BCA; }
+  .primary-btn:active {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #4ECAAB; }
+
+.secondary-btn {
+  display: inline-block;
+  padding: 6px 9px 6px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: none;
+  border: 4px solid #5882CA;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .secondary-btn:hover, .secondary-btn:focus {
+    background-color: #281E47;
+    border-color: #755BCA; }
+  .secondary-btn:active {
+    background-color: none;
+    border-color: #4ECAAB; }
+
+.footer {
+  width: 100%;
+  min-height: 50px;
+  padding: 20px;
+  text-align: center;
+  background-color: #281E47; }
+
+.wrapper {
+  max-width: 1250px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto; }
+
+.banner-text {
+  width: 70%;
+  padding: 15px;
+  margin: auto 0; }
+
+.banner-img {
+  width: 30%; }
+
+.section-index-banner {
+  padding: 75px 80px; }
+
+.practice-banner {
+  background: linear-gradient(0deg, #020A18 0%, #755BCA 10%, #755BCA 80%, #020A18 90%); }
+
+.internship-banner {
+  background: linear-gradient(0deg, #020A18 0%, #1D54BD 10%, #1D54BD 80%, #020A18 90%); }

@@ -44,9 +44,9 @@ namespace AIS_Lab.Controllers
             return View();
         }
 
-        public List<File> GetFiles()
-        {
+        //public List<File> GetFiles()
+        //{
             
-        }
+        //}
     }
 }
