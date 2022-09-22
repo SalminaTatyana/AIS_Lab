@@ -7,52 +7,50 @@ using System.Threading.Tasks;
 
 namespace AIS_Lab.Controllers
 {
-    public class FileController : Controller
+    public class SectionsOfTheSIteController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult AddFile (File file)
+        public IActionResult AddSectionsOfTheSite(SectionsOfTheSite sectionsOfTheSites)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                db.Files.Add(file);
+                db.SectionsOfTheSites.Add(sectionsOfTheSites);
                 db.SaveChanges();
             }
             return View();
         }
 
-        public IActionResult DeleteFile(File file)
+        public IActionResult DeleteSectionsOfTheSite(SectionsOfTheSite sectionsOfTheSites)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                db.Files.Remove(file);
+                db.SectionsOfTheSites.Remove(sectionsOfTheSites);
                 db.SaveChanges();
             }
             return View();
         }
 
-        public IActionResult ChangeFile(File file)
+        public IActionResult ChangeSectionsOfTheSite(SectionsOfTheSite sectionsOfTheSites)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                db.Files.Update(file);
+                db.SectionsOfTheSites.Update(sectionsOfTheSites);
                 db.SaveChanges();
             }
             return View();
         }
 
-        public List<File> GetFiles()
+        public List<SectionsOfTheSite> GetSectionsOfTheSite()
         {
-            List<File> files = new List<File>();
+            List<SectionsOfTheSite> sectionsOfTheSites = new List<SectionsOfTheSite>();
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                files = db.Files.ToList();
+                sectionsOfTheSites = db.SectionsOfTheSites.ToList();
             }
-            return files;
+            return sectionsOfTheSites;
         }
-
     }
 }

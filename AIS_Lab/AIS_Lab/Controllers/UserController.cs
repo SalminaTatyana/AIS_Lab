@@ -7,52 +7,50 @@ using System.Threading.Tasks;
 
 namespace AIS_Lab.Controllers
 {
-    public class FileController : Controller
+    public class UserController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult AddFile (File file)
+        public IActionResult AddUser(User user)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                db.Files.Add(file);
+                db.Users.Add(user);
                 db.SaveChanges();
             }
             return View();
         }
 
-        public IActionResult DeleteFile(File file)
+        public IActionResult DeleteUser(User user)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                db.Files.Remove(file);
+                db.Users.Remove(user);
                 db.SaveChanges();
             }
             return View();
         }
 
-        public IActionResult ChangeFile(File file)
+        public IActionResult ChangeUser(User user)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                db.Files.Update(file);
+                db.Users.Update(user);
                 db.SaveChanges();
             }
             return View();
         }
 
-        public List<File> GetFiles()
+        public List<User> GetUser()
         {
-            List<File> files = new List<File>();
+            List<User> users = new List<User>();
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                files = db.Files.ToList();
+                users = db.Users.ToList();
             }
-            return files;
+            return users;
         }
-
     }
 }

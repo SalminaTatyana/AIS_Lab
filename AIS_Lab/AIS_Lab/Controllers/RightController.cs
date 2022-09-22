@@ -7,52 +7,51 @@ using System.Threading.Tasks;
 
 namespace AIS_Lab.Controllers
 {
-    public class FileController : Controller
+    public class RightController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult AddFile (File file)
+        public IActionResult AddRight(Right right)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                db.Files.Add(file);
+                db.Rights.Add(right);
                 db.SaveChanges();
             }
             return View();
         }
 
-        public IActionResult DeleteFile(File file)
+        public IActionResult DeleteRight(Right right)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                db.Files.Remove(file);
+                db.Rights.Remove(right);
                 db.SaveChanges();
             }
             return View();
         }
 
-        public IActionResult ChangeFile(File file)
+        public IActionResult ChangeRight(Right right)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                db.Files.Update(file);
+                db.Rights.Update(right);
                 db.SaveChanges();
             }
             return View();
         }
 
-        public List<File> GetFiles()
+        public List<Right> GetRight()
         {
-            List<File> files = new List<File>();
+            List<Right> rights = new List<Right>();
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                files = db.Files.ToList();
+                rights = db.Rights.ToList();
             }
-            return files;
+            return rights;
         }
-
     }
 }

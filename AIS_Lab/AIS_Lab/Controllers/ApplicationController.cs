@@ -7,52 +7,51 @@ using System.Threading.Tasks;
 
 namespace AIS_Lab.Controllers
 {
-    public class FileController : Controller
+    public class ApplicationController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult AddFile (File file)
+        public IActionResult AddApplication(Application application)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                db.Files.Add(file);
+                db.Applications.Add(application);
                 db.SaveChanges();
             }
             return View();
         }
 
-        public IActionResult DeleteFile(File file)
+        public IActionResult DeleteApplication(Application application)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                db.Files.Remove(file);
+                db.Applications.Remove(application);
                 db.SaveChanges();
             }
             return View();
         }
 
-        public IActionResult ChangeFile(File file)
+        public IActionResult ChangeApplication(Application application)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                db.Files.Update(file);
+                db.Applications.Update(application);
                 db.SaveChanges();
             }
             return View();
         }
 
-        public List<File> GetFiles()
+        public List<Application> GetApplication()
         {
-            List<File> files = new List<File>();
+            List<Application> applications = new List<Application>();
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
-                files = db.Files.ToList();
+                applications = db.Applications.ToList();
             }
-            return files;
+            return applications;
         }
-
     }
 }
