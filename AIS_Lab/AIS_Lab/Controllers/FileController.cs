@@ -14,7 +14,7 @@ namespace AIS_Lab.Controllers
             return View();
         }
 
-        public IActionResult Add (File file)
+        public IActionResult AddFile (File file)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
@@ -24,7 +24,7 @@ namespace AIS_Lab.Controllers
             return View();
         }
 
-        public IActionResult Delete (File file)
+        public IActionResult DeleteFile(File file)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
@@ -34,7 +34,7 @@ namespace AIS_Lab.Controllers
             return View();
         }
 
-        public IActionResult Change (File file)
+        public IActionResult ChangeFile(File file)
         {
             using (ScientiaDBContext db = new ScientiaDBContext())
             {
