@@ -634,5 +634,23 @@ header {
 .practice-banner {
   background: linear-gradient(0deg, #020A18 0%, #755BCA 10%, #755BCA 80%, #020A18 90%); }
 
-.internship-banner {
+.freelance-banner {
   background: linear-gradient(0deg, #020A18 0%, #1D54BD 10%, #1D54BD 80%, #020A18 90%); }
+
+.section-index-banner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto; }
+  .section-index-banner .primary-btn {
+    margin: 20px 0 0 auto;
+    display: block;
+    width: fit-content; }
+
+.section-index-banner-text {
+  width: 50%;
+  padding: 15px; }
+
+.section-index-banner-img {
+  width: 50%; }
