@@ -30,8 +30,26 @@
                 </li>
             </ul>
         </div>
-        <div class="banner-img"></div>
+        <div class="banner-img"><img src="/images/home-image.png" /></div>
     </div>
+</section>
+<section class="card-list">
+    <a class="card" asp-controller="Practice" asp-action="Index" >
+        <img class="icon" src=@Url.Content("~/images/practice-icon.svg") width="115" height="70" aria-hidden="true" alt="Ввод показаний ЖКУ">
+        <b class="card-name">Практика</b>
+    </a>
+    <a class="card" asp-controller="TransferReadings" asp-action="Account" asp-route-system="SN">
+        <img class="icon" src=@Url.Content("~/images/student-card.svg") width="115" height="70" aria-hidden="true" alt="Ввод показаний ЖКУ">
+        <b class="card-name">Стажировка</b>
+    </a>
+    <a class="card" asp-controller="TransferReadings" asp-action="Account" asp-route-system="SN">
+        <img class="icon" src=@Url.Content("~/images/freelance-icon.svg") width="115" height="70" aria-hidden="true" alt="Ввод показаний ЖКУ">
+        <b class="card-name">Фриланс</b>
+    </a>
+    <a class="card" asp-controller="TransferReadings" asp-action="Account" asp-route-system="SN">
+        <img class="icon" src=@Url.Content("~/images/courses-icon.svg") width="115" height="70" aria-hidden="true" alt="Ввод показаний ЖКУ">
+        <b class="card-name">Курсы</b>
+    </a>
 </section>
 <section class="practice-banner">
     @{await Html.RenderPartialAsync("_partialIndexSection", new IndexSectionModel {
@@ -39,8 +57,8 @@
             Text= "Scientia - это практика программистом для студентов, а также тех, кто хочет повысить свою квалификацию. Каждый работодатель хочет видеть в кандидате сотрудника, готового уже завтра полноценно приступить к работе.  Поэтому даже самый талантливый студент сначала попадает на стажировку. Ему еще только предстоит сопоставить теоретические знания и реальную работу. Практика в АИС Город - это прекрасная возможность научиться всему за короткий промежуток времени. Практика в АИС Город - это ключ к успешному трудоустройству и пониманию процесса разработки в целом!",
             Img= "/images/practice.png",
             IsButton=true,
-            Controller="",
-            Action="",
+            Controller="Practice",
+            Action="Index",
         });
     }
 </section>
@@ -75,28 +93,29 @@
         });
     }
 </section>
-<section class="hackaton-banner">
-    @{await Html.RenderPartialAsync("_partialIndexSection", new IndexSectionModel
-        {
-            BlockTitle = "Scientia - активность!",
-            Text = "Хакатон – это прекрасная возможность проверить себя, а также получить новые навыки и знания. Узнать, что такое работа в команде и выполнение задания в максимально сжатый срок. ООО «АИС Город» проводят Хакатоны для студентов средних специальных и высших учебных заведений!  Кроме мероприятий для студентов, ООО «АИС Город» проводят  для всех жителей города различные мероприятия, напрмер «Ночное Ориентирование». Регистрируйтесь и участвуйте в мероприятиях  ООО «АИС Город»",
 
-            IsButton = true,
-            Controller = "",
-            Action = "",
-        });
-    }
-</section>
 <section class="course-banner">
     @{await Html.RenderPartialAsync("_partialIndexSection", new IndexSectionModel
         {
             BlockTitle = "Scientia - активность!",
             Text = "Хакатон – это прекрасная возможность проверить себя, а также получить новые навыки и знания. Узнать, что такое работа в команде и выполнение задания в максимально сжатый срок. ООО «АИС Город» проводят Хакатоны для студентов средних специальных и высших учебных заведений!  Кроме мероприятий для студентов, ООО «АИС Город» проводят  для всех жителей города различные мероприятия, напрмер «Ночное Ориентирование». Регистрируйтесь и участвуйте в мероприятиях  ООО «АИС Город»",
-
+            Img = "/images/geolocation.png",
             IsButton = true,
             Controller = "",
             Action = "",
         });
     }
 </section>
+@*<section class="hackaton-banner">
+    @{await Html.RenderPartialAsync("_partialIndexSection", new IndexSectionModel
+        {
+            BlockTitle = "Scientia - активность!",
+            Text = "Хакатон – это прекрасная возможность проверить себя, а также получить новые навыки и знания. Узнать, что такое работа в команде и выполнение задания в максимально сжатый срок. ООО «АИС Город» проводят Хакатоны для студентов средних специальных и высших учебных заведений!  Кроме мероприятий для студентов, ООО «АИС Город» проводят  для всех жителей города различные мероприятия, напрмер «Ночное Ориентирование». Регистрируйтесь и участвуйте в мероприятиях  ООО «АИС Город»",
+
+            IsButton = true,
+            Controller = "",
+            Action = "",
+        });
+    }
+</section>*@
 <section class="special-banner"></section>
