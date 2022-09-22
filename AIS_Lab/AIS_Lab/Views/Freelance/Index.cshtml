@@ -1,5 +1,25 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<section class="banner">
+    @{await Html.RenderPartialAsync("_partialIndexSection", new IndexSectionModel
+        {
+            BlockTitle = "Scientia - это фриланс!",
+            Text = "Фрилансер — это свободный работник, который берется за тот заказ, который считает выгодным, и сам организует себе рабочее время и пространство. Все больше людей выбирают фриланс в качестве основного заработка.Бытует мнение, что фрилансер – это специалист,который ищет работу исключительно на фриланс биржах.Но и это заблуждение.Искать проекты можно и нужно не только на таких специализированных площадках. Scientia - это место,где фрилансер всегда сможет найти себе задачи для выполнения! ",
+            Img = "/images/handshake.png",
+
+            IsButton = true,
+            Controller = "Freelance",
+            Action = "Index",
+        });
+    }
+</section>
+<section class="freelance-banner">
+    @{await Html.RenderPartialAsync("_partialIndexSection", new IndexSectionModel
+        {
+            BlockTitle = "Задачи от ООО “АИС ГОРОД”",
+            Text = "Выполните задачи от ООО “АИС ГОРОД”",
+            Img = "/images/practices.png",
+            IsButton = true,
+            Controller = "Freelance",
+            Action = "Index",
+        });
+    }
+</section>

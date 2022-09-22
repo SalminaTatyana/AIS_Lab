@@ -1,5 +1,30 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<section class="banner">
+    @{await Html.RenderPartialAsync("_partialIndexSection", new IndexSectionModel
+        {
+            BlockTitle = "Scientia - это трудоустройство!",
+            Text = "Scientia - это  стажировка. Scientia - это профессиональная программа, которая позволяет получить опыт работы в реальной организациии и повысить квалификацию по специальности. У нас вы сможете: ",
+            Img = "/images/career-growth.png",
+            List = new string[]
+                    { "Разобраться в специфике работы.",
+                "Стажировка поможет привыкнуть к ритму и решить, подходит ли он вам.",
+                "Наладить полезные связи. Вы будете общаться с профессионалами, и эти знакомства могут оказаться полезными в будущем.",
+                "Понять, куда стремиться дальше. Стажировка в этом случае помогает изучить выбранный профиль обучения с практической стороны."
+                                },
+            IsButton = false,
+            Controller = "",
+            Action = "",
+        });
+    }
+    </section>
+    <section class="freelance-banner">
+        @{await Html.RenderPartialAsync("_partialIndexSection", new IndexSectionModel
+            {
+                BlockTitle = "Стажировка в ООО “АИС ГОРОД”",
+                Text = "Пройдите стажировку в ООО “АИС ГОРОД”",
+                Img = "/images/practices.png",
+                IsButton = true,
+                Controller = "Practice",
+                Action = "Index",
+            });
+        }
+    </section>
