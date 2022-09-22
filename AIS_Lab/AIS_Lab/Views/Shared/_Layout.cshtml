@@ -12,7 +12,7 @@
     <div class="main-wrapper">
         <div class="container">
             <header>
-                
+
 
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <svg width="177" height="36" viewBox="0 0 236 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -26,31 +26,38 @@
                     </svg>
                     <p class="navbar-brand-text">Scientia</p>
                 </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                   
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Практика</a>
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Стажировка</a>
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Фриланс</a>
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Курсы</a>
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Мероприятия</a>
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Контакты</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Практика</a>
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Стажировка</a>
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Фриланс</a>
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Курсы</a>
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Мероприятия</a>
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Контакты</a>
             </header>
 
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
 
+            <section class="footer-logo" style="margin: auto;">
+                <img src="~/images/icon-ais.png"/>
+                <img src="~/images/icon-ais-geeks.png"/>
+                <img src="~/images/icon-diti.png" />
 
+
+
+            </section>
             <footer class="footer">
 
                 &copy; 2022 -<a href="https://www.aisgorod.ru/"> АИС ГОРОД </a>Scientia
 
             </footer>
-            </div>
+        </div>
         </div>
             <script src="~/lib/jquery/dist/jquery.min.js"></script>
             <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
