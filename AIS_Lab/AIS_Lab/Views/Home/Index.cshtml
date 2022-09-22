@@ -38,15 +38,15 @@
         <img class="icon" src=@Url.Content("~/images/practice-icon.svg") width="115" height="70" aria-hidden="true" alt="Ввод показаний ЖКУ">
         <b class="card-name">Практика</b>
     </a>
-    <a class="card" asp-controller="TransferReadings" asp-action="Account" asp-route-system="SN">
+    <a class="card" asp-controller="Internship" asp-action="Index" asp-route-system="SN">
         <img class="icon" src=@Url.Content("~/images/student-card.svg") width="115" height="70" aria-hidden="true" alt="Ввод показаний ЖКУ">
         <b class="card-name">Стажировка</b>
     </a>
-    <a class="card" asp-controller="TransferReadings" asp-action="Account" asp-route-system="SN">
+    <a class="card" asp-controller="Freelance" asp-action="Index" asp-route-system="SN">
         <img class="icon" src=@Url.Content("~/images/freelance-icon.svg") width="115" height="70" aria-hidden="true" alt="Ввод показаний ЖКУ">
         <b class="card-name">Фриланс</b>
     </a>
-    <a class="card" asp-controller="TransferReadings" asp-action="Account" asp-route-system="SN">
+    <a class="card" asp-controller="TransferReadings" asp-action="Index" asp-route-system="SN">
         <img class="icon" src=@Url.Content("~/images/courses-icon.svg") width="115" height="70" aria-hidden="true" alt="Ввод показаний ЖКУ">
         <b class="card-name">Курсы</b>
     </a>
@@ -75,8 +75,8 @@
                 "Понять, куда стремиться дальше. Стажировка в этом случае помогает изучить выбранный профиль обучения с практической стороны."
             },
             IsButton = true,
-            Controller = "",
-            Action = "",
+            Controller = "Internship",
+            Action = "Index",
         });
     }
 </section>
@@ -88,8 +88,8 @@
               Img = "/images/handshake.png",
 
             IsButton = true,
-            Controller = "",
-            Action = "",
+            Controller = "Freelance",
+            Action = "Index",
         });
     }
 </section>
