@@ -8,7 +8,7 @@
    
 }
 .banner {
-    
+    margin-bottom: 45px;
 }
 .banner-text {
     width: 70%;
@@ -52,4 +52,9 @@
 }
 .section-index-banner-img{
     width: 50%;
+}
+.practice-banner, .freelance-banner {
+    .section-index-banner-img {
+        order: -1;
+    }
 }

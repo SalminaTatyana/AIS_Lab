@@ -620,6 +620,9 @@ header {
   flex-wrap: wrap;
   margin: auto; }
 
+.banner {
+  margin-bottom: 45px; }
+
 .banner-text {
   width: 70%;
   padding: 15px;
@@ -654,3 +657,47 @@ header {
 
 .section-index-banner-img {
   width: 50%; }
+
+.practice-banner .section-index-banner-img, .freelance-banner .section-index-banner-img {
+  order: -1; }
+
+.card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0; }
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: calc(25% - 30px);
+  min-height: 145px;
+  padding: 10px 15px;
+  margin: 0px 15px 25px;
+  background-color: #361E83;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  word-break: break-all;
+  cursor: pointer;
+  text-align: center; }
+  .card:hover, .card:focus {
+    background-color: #1D54BD; }
+  .card:active {
+    background: #198369; }
+  .card .icon {
+    margin: auto; }
+
+.card-name {
+  font-size: 24px;
+  font-weight: 500;
+  word-break: break-word;
+  color: #FFFFFF;
+  width: 100%; }
